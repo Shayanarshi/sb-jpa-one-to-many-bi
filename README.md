@@ -1,8 +1,9 @@
+
 # Spring Boot JPA – One-to-Many Bidirectional
 
-A Spring Boot project demonstrating how to implement and manage a **Bidirectional One-to-Many relationship** using **Spring Data JPA and Hibernate**.
+A Spring Boot project demonstrating a Bidirectional One-to-Many relationship using Spring Data JPA and Hibernate.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - Java
 - Spring Boot
@@ -11,29 +12,35 @@ A Spring Boot project demonstrating how to implement and manage a **Bidirectiona
 - Oracle Database
 - Maven
 
-## 📌 Project Overview
+## Project Overview
 
-This project focuses on mapping a **One-to-Many Bidirectional relationship** between entities.
+This project demonstrates how to map and manage a One-to-Many Bidirectional relationship between entities.
 
-A parent entity can be associated with multiple child entities, while each child entity maintains a reference back to its parent.
+In a bidirectional relationship:
+- One parent entity can have multiple child entities.
+- Each child entity maintains a reference back to the parent.
+- `mappedBy` is used to define the inverse side of the relationship.
 
 ```text
 Parent
-  │
-  └─── 1 : Many ───> Child
+   |
+   └── 1 : Many ──> Child
+````
 
+## Key Concepts
 
+* `@OneToMany`
+* `@ManyToOne`
+* `mappedBy`
+* JPA Entity Mapping
+* Spring Data JPA Repositories
+* Hibernate ORM
+* Entity Relationships
+* Database Persistence
 
-🔑 Key Concepts
-@OneToMany
-@ManyToOne
-mappedBy
-JPA Entity Mapping
-Spring Data JPA Repositories
-Hibernate ORM
-Entity Relationships
-Database Persistence
-📂 Project Structure
+## Project Structure
+
+```text
 src/
 └── main/
     ├── java/
@@ -44,20 +51,28 @@ src/
     │
     └── resources/
         └── application.properties
-⚙️ Configuration
+```
+
+## Configuration
 
 Configure the database connection and JPA properties in:
 
-src/main/resources/application.properties
-▶️ Run the Application
+`src/main/resources/application.properties`
+
+## Run the Application
+
+```bash
 mvn spring-boot:run
+```
 
-Or run the Spring Boot application directly from your IDE.
+You can also run the application directly from your IDE.
 
-🎯 Purpose
+## Purpose
 
 This project was created to practice JPA entity relationships, bidirectional mapping, and database operations using Spring Boot.
 
-👨‍💻 Author
+## Author
 
-Shayan Arshi
+**Shayan Arshi**
+
+GitHub: [https://github.com/Shayanarshi](https://github.com/Shayanarshi)
